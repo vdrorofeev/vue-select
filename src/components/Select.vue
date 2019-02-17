@@ -50,12 +50,18 @@
 
     <transition :name="transition">
       <ul ref="dropdownMenu" v-if="dropdownOpen" class="vs__dropdown-menu" :style="{ 'max-height': maxHeight }" role="listbox" @mousedown="onMousedown">
-        <li role="option" v-for="(option, index) in filteredOptions" v-bind:key="index" :class="{ active: isOptionSelected(option), highlight: index === typeAheadPointer }" @mouseover="typeAheadPointer = index">
-          <a @mousedown.prevent.stop="select(option)">
+        <li
+          role="option"
+          v-for="(option, index) in filteredOptions"
+          :key="index"
+          class="vs__dropdown-option"
+          :class="{ active: isOptionSelected(option), 'vs__dropdown-option--highlight': index === typeAheadPointer }"
+          @mouseover="typeAheadPointer = index"
+          @mousedown.prevent.stop="select(option)"
+        >
           <slot name="option" v-bind="(typeof option === 'object')?option:{[label]: option}">
             {{ getOptionLabel(option) }}
           </slot>
-          </a>
         </li>
         <li v-if="!filteredOptions.length" class="vs__no-options" @mousedown.stop="">
           <slot name="no-options">Sorry, no matching options.</slot>
