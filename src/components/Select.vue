@@ -852,6 +852,7 @@
               'role': 'combobox',
               'type': 'search',
               'autocomplete': 'off',
+              'value': this.search,
             },
             events: {
               'keydown': this.onSearchKeyDown,
