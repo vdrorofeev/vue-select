@@ -3,6 +3,7 @@
 @import "modules/rtl";
 @import "modules/dropdown-toggle";
 @import "modules/open-indicator";
+@import "modules/clear";
 
 .v-select {
   position: relative;
@@ -11,19 +12,6 @@
 .v-select,
 .v-select * {
   box-sizing: border-box;
-}
-
-/* Clear Button */
-.v-select .vs__dropdown-toggle .clear {
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 1;
-  color: rgba(60, 60, 60, 0.5);
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  margin-right: 6px;
 }
 
 /* Dropdown Menu */
@@ -181,7 +169,7 @@
 
 /* Disabled state */
 .v-select.disabled .vs__dropdown-toggle,
-.v-select.disabled .vs__dropdown-toggle .clear,
+.v-select.disabled .vs__dropdown-toggle .vs__clear,
 .v-select.disabled .vs__dropdown-toggle input,
 .v-select.disabled .selected-tag .close,
 .v-select.disabled .vs__open-indicator {

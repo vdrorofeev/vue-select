@@ -30,7 +30,7 @@
           :disabled="disabled"
           @click="clearSelection"
           type="button"
-          class="clear"
+          class="vs__clear"
           title="Clear selection"
         >
           <span aria-hidden="true">&times;</span>

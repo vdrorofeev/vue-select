@@ -1,0 +1,15 @@
+/* Clear Button */
+
+$color: rgba(60, 60, 60, 0.5);
+
+.vs__clear {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+  color: $color;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 6px;
+}
