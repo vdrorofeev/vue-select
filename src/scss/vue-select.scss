@@ -5,6 +5,7 @@
 @import "modules/open-indicator";
 @import "modules/clear";
 @import "modules/dropdown-menu";
+@import "modules/selected";
 
 .v-select {
   position: relative;
@@ -15,48 +16,6 @@
   box-sizing: border-box;
 }
 
-/* Selected Tags */
-.v-select .selected-tag {
-  display: flex;
-  align-items: center;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
-  line-height: 1.42857143; /* Normalize line height */
-  margin: 4px 2px 0px 2px;
-  padding: 0 0.25em;
-  transition: opacity .25s;
-}
-.v-select.single .selected-tag {
-  background-color: transparent;
-  border-color: transparent;
-}
-.v-select.single.open .selected-tag {
-  position: absolute;
-  opacity: .4;
-}
-.v-select.single.searching .selected-tag {
-  display: none;
-}
-.v-select .selected-tag .close {
-  margin-left: 2px;
-  font-size: 1.25em;
-  appearance: none;
-  padding: 0;
-  cursor: pointer;
-  background: 0 0;
-  border: 0;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: .2;
-}
-.v-select.single.searching:not(.open):not(.loading) input[type="search"] {
-  opacity: .2;
-}
 /* Search Input */
 .v-select input[type="search"]::-webkit-search-decoration,
 .v-select input[type="search"]::-webkit-search-cancel-button,
@@ -149,7 +108,7 @@
 .v-select.disabled .vs__dropdown-toggle,
 .v-select.disabled .vs__dropdown-toggle .vs__clear,
 .v-select.disabled .vs__dropdown-toggle input,
-.v-select.disabled .selected-tag .close,
+.v-select.disabled .vs__selected .close,
 .v-select.disabled .vs__open-indicator {
   cursor: not-allowed;
   background-color: rgb(248, 248, 248);

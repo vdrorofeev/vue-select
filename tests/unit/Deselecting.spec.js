@@ -68,7 +68,7 @@ describe("Removing values", () => {
       });
 
       expect(Select.vm.mutableValue).toEqual("foo");
-      Select.find("button.clear").trigger("click");
+      Select.find("button.vs__clear").trigger("click");
       expect(Select.vm.mutableValue).toEqual(null);
     });
 
@@ -79,7 +79,7 @@ describe("Removing values", () => {
         disabled: true
       });
 
-      expect(Select.find("button.clear").attributes().disabled).toEqual(
+      expect(Select.find("button.vs__clear").attributes().disabled).toEqual(
         "disabled"
       );
     });

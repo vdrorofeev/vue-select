@@ -23,7 +23,7 @@ describe("Toggling Dropdown", () => {
       options: [{ label: "one" }]
     });
 
-    const selectedTag = Select.find(".selected-tag").element;
+    const selectedTag = Select.find(".vs__selected").element;
 
     Select.vm.toggleDropdown({ target: selectedTag });
     expect(Select.vm.open).toEqual(true);
