@@ -8,7 +8,9 @@ const env = process.env.NODE_ENV === 'production'
   ? 'production'
   : 'development';
 
-const extractOrInjectStyles = process.env.NODE_ENV !== 'production'
+const devtool = env === 'production' ? 'source-map' : 'eval-source-map';
+
+const extractOrInjectStyles = env !== 'production'
   ? 'vue-style-loader'
   : MiniCssExtractPlugin.loader;
 
@@ -19,7 +21,7 @@ module.exports = {
     publicPath: '/',
     filename: '[name].js',
   },
-  // devtool: env === 'production' ? 'source-map' : 'eval-source-map',
+  devtool,
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
@@ -47,6 +49,7 @@ module.exports = {
         use: [
           extractOrInjectStyles,
           'css-loader',
+          'postcss-loader',
           'sass-loader',
         ],
       },
@@ -77,5 +80,9 @@ module.exports = {
         server.sockWrite(server.sockets, 'content-changed');
       });
     },
+  },
+  stats: {
+    children: false,
+    modules: false,
   },
 };
