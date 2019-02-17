@@ -1,13 +1,52 @@
 /** Component States */
 
-$disabled-bg: rgb(248, 248, 248);
+/*
+ * Disabled
+ *
+ * When the component is disabled, all interaction
+ * should be prevented. He we modify the bg color,
+ * and change the cursor displayed on the interactive
+ * components.
+ */
 
-/* Disabled state */
-.v-select.disabled .vs__dropdown-toggle,
-.v-select.disabled .vs__clear,
-.v-select.disabled .vs__search,
-.v-select.disabled .vs__selected .close,
-.v-select.disabled .vs__open-indicator {
-  cursor: not-allowed;
-  background-color: $disabled-bg;
+$disabled-bg: rgb(248, 248, 248);
+$disabled-cursor: not-allowed;
+
+.v-select.disabled {
+  .vs__dropdown-toggle,
+  .vs__clear,
+  .vs__search,
+  .vs__selected .close,
+  .vs__open-indicator {
+    cursor: $disabled-cursor;
+    background-color: $disabled-bg;
+  }
+}
+
+/*
+ *  RTL - Right to Left Support
+ *
+ *  Because we're using a flexbox layout, the `dir="rtl"`
+ *  HTML attribute does most of the work for us by
+ *  rearranging the child elements visually.
+ */
+
+.v-select[dir="rtl"] {
+  .vs__actions {
+    padding: 0 3px 0 6px;
+  }
+
+  .vs__clear {
+    margin-left: 6px;
+    margin-right: 0;
+  }
+
+  .vs__selected .close {
+    margin-left: 0;
+    margin-right: 2px;
+  }
+
+  .vs__dropdown-menu {
+    text-align: right;
+  }
 }
