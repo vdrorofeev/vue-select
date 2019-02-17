@@ -42,8 +42,8 @@
 
         <i v-if="!noDrop" ref="openIndicator" role="presentation" class="vs__open-indicator"></i>
 
-        <slot name="spinner">
-          <div class="spinner" v-show="mutableLoading">Loading...</div>
+        <slot name="spinner" v-bind="scope.spinner">
+          <div class="vs__spinner" v-show="mutableLoading">Loading...</div>
         </slot>
       </div>
     </div>
@@ -862,6 +862,9 @@
               'input': (e) => this.search = e.target.value,
             },
           },
+          spinner: {
+            loading: this.mutableLoading
+          }
         };
       },
 
