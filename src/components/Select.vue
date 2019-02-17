@@ -57,7 +57,7 @@
           </slot>
           </a>
         </li>
-        <li v-if="!filteredOptions.length" class="no-options" @mousedown.stop="">
+        <li v-if="!filteredOptions.length" class="vs__no-options" @mousedown.stop="">
           <slot name="no-options">Sorry, no matching options.</slot>
         </li>
       </ul>
@@ -847,7 +847,7 @@
               'role': 'combobox',
               'type': 'search',
               'autocomplete': 'off',
-              'class': 'form-control',
+              'class': 'vs__search',
             },
             events: {
               'keydown': this.onSearchKeyDown,

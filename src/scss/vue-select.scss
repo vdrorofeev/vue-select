@@ -6,6 +6,7 @@
 @import "modules/clear";
 @import "modules/dropdown-menu";
 @import "modules/selected";
+@import "modules/search-input";
 
 .v-select {
   position: relative;
@@ -14,42 +15,6 @@
 .v-select,
 .v-select * {
   box-sizing: border-box;
-}
-
-/* Search Input */
-.v-select input[type="search"]::-webkit-search-decoration,
-.v-select input[type="search"]::-webkit-search-cancel-button,
-.v-select input[type="search"]::-webkit-search-results-button,
-.v-select input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-.v-select input[type="search"]::-ms-clear {
-  display: none;
-}
-.v-select input[type="search"],
-.v-select input[type="search"]:focus {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  line-height: 1.42857143;
-  font-size: 1em;
-  display: inline-block;
-  border: 1px solid transparent;
-  border-left: none;
-  outline: none;
-  margin: 4px 0 0 0;
-  padding: 0 7px;
-  max-width: 100%;
-  background: none;
-  box-shadow: none;
-  flex-grow: 1;
-  width: 0;
-}
-.v-select.unsearchable input[type="search"] {
-  opacity: 0;
-}
-.v-select.unsearchable input[type="search"]:hover {
-  cursor: pointer;
 }
 
 /* List Items */
