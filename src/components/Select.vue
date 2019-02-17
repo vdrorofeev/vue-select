@@ -24,7 +24,7 @@
         </slot>
 
         <slot name="search" v-bind="scope.search">
-          <input v-bind="scope.search.attributes" v-on="scope.search.events">
+          <input class="vs__search" v-bind="scope.search.attributes" v-on="scope.search.events">
         </slot>
 
       </div>
@@ -852,7 +852,6 @@
               'role': 'combobox',
               'type': 'search',
               'autocomplete': 'off',
-              'class': 'vs__search',
             },
             events: {
               'keydown': this.onSearchKeyDown,
