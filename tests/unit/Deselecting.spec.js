@@ -4,7 +4,7 @@ describe("Removing values", () => {
   it("can remove the given tag when its close icon is clicked", () => {
     const Select = selectWithProps({ multiple: true, value: ["foo"] });
 
-    Select.find(".close").trigger("click");
+    Select.find(".vs__deselect").trigger("click");
     expect(Select.vm.mutableValue).toEqual([]);
   });
 
@@ -16,7 +16,7 @@ describe("Removing values", () => {
       disabled: true
     });
 
-    Select.find(".close").trigger("click");
+    Select.find(".vs__deselect").trigger("click");
     expect(Select.vm.mutableValue).toEqual(["one"]);
   });
 

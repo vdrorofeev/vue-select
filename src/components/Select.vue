@@ -17,7 +17,7 @@
             <slot name="selected-option" v-bind="(typeof option === 'object')?option:{[label]: option}">
               {{ getOptionLabel(option) }}
             </slot>
-            <button v-if="multiple" :disabled="disabled" @click="deselect(option)" type="button" class="close" aria-label="Remove option">
+            <button v-if="multiple" :disabled="disabled" @click="deselect(option)" type="button" class="vs__deselect" aria-label="Deselect option">
               <span aria-hidden="true">&times;</span>
             </button>
           </span>
@@ -26,8 +26,8 @@
         <slot name="search" v-bind="scope.search">
           <input class="vs__search" v-bind="scope.search.attributes" v-on="scope.search.events">
         </slot>
-
       </div>
+
       <div class="vs__actions">
         <button
           v-show="showClearButton"
