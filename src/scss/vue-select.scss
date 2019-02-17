@@ -1,30 +1,14 @@
+@import "variables";
+
+@import "modules/rtl";
+
 .v-select {
   position: relative;
   font-family: inherit;
 }
 .v-select,
 .v-select * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-/* Rtl support - Because we're using a flexbox-based layout, the `dir="rtl"` HTML
-   attribute does most of the work for us by rearranging the child elements visually.
- */
-.v-select[dir="rtl"] .vs__actions {
-  padding: 0 3px 0 6px;
-}
-.v-select[dir="rtl"] .dropdown-toggle .clear {
-  margin-left: 6px;
-  margin-right: 0;
-}
-.v-select[dir="rtl"] .selected-tag .close {
-  margin-left: 0;
-  margin-right: 2px;
-}
-.v-select[dir="rtl"] .dropdown-menu {
-  text-align: right;
 }
 
 /* Open Indicator */

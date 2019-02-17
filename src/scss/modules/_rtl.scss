@@ -1,0 +1,26 @@
+/*
+ *  RTL - Right to Left Support
+ *
+ *  Because we're using a flexbox layout, the `dir="rtl"` HTML
+ *  attribute does most of the work for us by rearranging the child elements visually.
+ */
+
+.v-select[dir="rtl"] {
+  .vs__actions {
+    padding: 0 3px 0 6px;
+  }
+
+  .dropdown-toggle .clear {
+    margin-left: 6px;
+    margin-right: 0;
+  }
+
+  .selected-tag .close {
+    margin-left: 0;
+    margin-right: 2px;
+  }
+
+  .dropdown-menu {
+    text-align: right;
+  }
+}
