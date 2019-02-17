@@ -1,0 +1,13 @@
+/** Component States */
+
+$disabled-bg: rgb(248, 248, 248);
+
+/* Disabled state */
+.v-select.disabled .vs__dropdown-toggle,
+.v-select.disabled .vs__clear,
+.v-select.disabled .vs__search,
+.v-select.disabled .vs__selected .close,
+.v-select.disabled .vs__open-indicator {
+  cursor: not-allowed;
+  background-color: $disabled-bg;
+}
