@@ -1,5 +1,7 @@
 @import "variables";
 
+@import "global/animations";
+
 @import "modules/rtl";
 @import "modules/dropdown-toggle";
 @import "modules/open-indicator";
@@ -83,29 +85,4 @@
 .v-select.loading .spinner {
   opacity: 1;
 }
-/* KeyFrames */
-@-webkit-keyframes vSelectSpinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes vSelectSpinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Dropdown Default Transition */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity .15s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
+

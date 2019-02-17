@@ -154,13 +154,12 @@
       },
 
       /**
-       * Sets a Vue transition property on the `.vs__dropdown-menu`. vue-select
-       * does not include CSS for transitions, you'll need to add them yourself.
+       * Sets a Vue transition property on the `.vs__dropdown-menu`.
        * @type {String}
        */
       transition: {
         type: String,
-        default: 'fade'
+        default: 'vs__fade'
       },
 
       /**
