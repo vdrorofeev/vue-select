@@ -41,13 +41,13 @@ $border-radius: $vs-border-radius !default;
 }
 
 /* Dropdown Toggle States */
-.v-select.searchable .vs__dropdown-toggle {
+.vs--searchable .vs__dropdown-toggle {
   cursor: text;
 }
-.v-select.unsearchable .vs__dropdown-toggle {
+.vs--unsearchable .vs__dropdown-toggle {
   cursor: pointer;
 }
-.v-select.open .vs__dropdown-toggle {
+.vs--open .vs__dropdown-toggle {
   border-bottom-color: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;

@@ -11,17 +11,7 @@
   padding: 0 0.25em;
   transition: opacity .25s;
 }
-.v-select.single .vs__selected {
-  background-color: transparent;
-  border-color: transparent;
-}
-.v-select.single.open .vs__selected {
-  position: absolute;
-  opacity: .4;
-}
-.v-select.single.searching .vs__selected {
-  display: none;
-}
+
 .vs__selected .close {
   margin-left: 2px;
   font-size: 1.25em;
@@ -37,6 +27,25 @@
   filter: alpha(opacity=20);
   opacity: .2;
 }
-.v-select.single.searching:not(.open):not(.loading) input[type="search"] {
+
+/**
+    States
+ */
+
+.vs--single {
+  .vs__selected {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .vs--open .vs__selected {
+    position: absolute;
+    opacity: .4;
+  }
+  .vs--searching .vs__selected {
+    display: none;
+  }
+}
+
+.vs--single.searching:not(.open):not(.loading) input[type="search"] {
   opacity: .2;
 }

@@ -3,7 +3,7 @@
 </style>
 
 <template>
-  <div :dir="dir" class="v-select" :class="dropdownClasses">
+  <div :dir="dir" class="v-select" :class="stateClasses">
     <div ref="toggle" @mousedown.prevent="toggleDropdown" class="vs__dropdown-toggle">
 
       <div class="vs__selected-options" ref="selectedOptions">
@@ -868,18 +868,18 @@
       },
 
       /**
-       * Classes to be output on .dropdown
+       * Holds the current state of the component.
        * @return {Object}
        */
-      dropdownClasses() {
+      stateClasses() {
         return {
-          open: this.dropdownOpen,
-          single: !this.multiple,
-          searching: this.searching,
-          searchable: this.searchable,
-          unsearchable: !this.searchable,
-          loading: this.mutableLoading,
-          disabled: this.disabled
+          'vs--open': this.dropdownOpen,
+          'vs--single': !this.multiple,
+          'vs--searching': this.searching,
+          'vs--searchable': this.searchable,
+          'vs--unsearchable': !this.searchable,
+          'vs--loading': this.mutableLoading,
+          'vs--disabled': this.disabled
         }
       },
 
@@ -897,7 +897,7 @@
        * @return {Boolean} True if non empty value
        */
       searching() {
-        return !!this.search
+        return !! this.search
       },
 
       /**

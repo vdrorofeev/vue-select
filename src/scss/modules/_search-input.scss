@@ -32,9 +32,9 @@ $font-size: 1em;
     States
  */
 
-.v-select.unsearchable .vs__search {
+.vs--unsearchable .vs__search {
   opacity: 0;
 }
-.v-select.unsearchable .vs__search:hover {
+.vs--unsearchable .vs__search:hover {
   cursor: pointer;
 }

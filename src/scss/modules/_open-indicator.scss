@@ -42,7 +42,7 @@ $open-indicator-color: rgba(60, 60, 60, .5);
     Open State
  */
 
-.v-select.open .vs__open-indicator:before {
+.vs--open .vs__open-indicator:before {
   transform: rotate(315deg);
 }
 
@@ -50,6 +50,6 @@ $open-indicator-color: rgba(60, 60, 60, .5);
     Loading State
  */
 
-.v-select.loading .vs__open-indicator {
+.vs--loading .vs__open-indicator {
   opacity: 0;
 }
