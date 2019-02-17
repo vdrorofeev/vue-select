@@ -16,7 +16,7 @@ $disabled-cursor: not-allowed;
   .vs__dropdown-toggle,
   .vs__clear,
   .vs__search,
-  .vs__selected .close,
+  .vs__selected,
   .vs__open-indicator {
     cursor: $disabled-cursor;
     background-color: $disabled-bg;
