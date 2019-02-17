@@ -872,7 +872,6 @@
           searchable: this.searchable,
           unsearchable: !this.searchable,
           loading: this.mutableLoading,
-          rtl: this.dir === 'rtl', // This can be removed - styling is handled by `dir="rtl"` attribute
           disabled: this.disabled
         }
       },
