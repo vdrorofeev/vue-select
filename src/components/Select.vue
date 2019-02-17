@@ -45,7 +45,7 @@
     </div>
 
     <transition :name="transition">
-      <ul ref="dropdownMenu" v-if="dropdownOpen" class="dropdown-menu" :style="{ 'max-height': maxHeight }" role="listbox" @mousedown="onMousedown">
+      <ul ref="dropdownMenu" v-if="dropdownOpen" class="vs__dropdown-menu" :style="{ 'max-height': maxHeight }" role="listbox" @mousedown="onMousedown">
         <li role="option" v-for="(option, index) in filteredOptions" v-bind:key="index" :class="{ active: isOptionSelected(option), highlight: index === typeAheadPointer }" @mouseover="typeAheadPointer = index">
           <a @mousedown.prevent.stop="select(option)">
           <slot name="option" v-bind="(typeof option === 'object')?option:{[label]: option}">
@@ -150,7 +150,7 @@
       },
 
       /**
-       * Sets a Vue transition property on the `.dropdown-menu`. vue-select
+       * Sets a Vue transition property on the `.vs__dropdown-menu`. vue-select
        * does not include CSS for transitions, you'll need to add them yourself.
        * @type {String}
        */

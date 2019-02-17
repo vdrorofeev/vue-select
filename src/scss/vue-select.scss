@@ -4,6 +4,7 @@
 @import "modules/dropdown-toggle";
 @import "modules/open-indicator";
 @import "modules/clear";
+@import "modules/dropdown-menu";
 
 .v-select {
   position: relative;
@@ -14,29 +15,6 @@
   box-sizing: border-box;
 }
 
-/* Dropdown Menu */
-.v-select .dropdown-menu {
-  display:block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 0;
-  width: 100%;
-  overflow-y: auto;
-  border: 1px solid rgba(0, 0, 0, .26);
-  box-shadow: 0px 3px 6px 0px rgba(0,0,0,.15);
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  text-align: left;
-  list-style: none;
-  background: #fff;
-}
-.v-select .no-options {
-  text-align: center;
-}
 /* Selected Tags */
 .v-select .selected-tag {
   display: flex;
@@ -129,14 +107,14 @@
 .v-select li:hover {
   cursor: pointer;
 }
-.v-select .dropdown-menu .active > a {
+.v-select .vs__dropdown-menu .active > a {
   color: #333;
   background: rgba(50, 50, 50, .1);
 }
-.v-select .dropdown-menu > .highlight > a {
+.v-select .vs__dropdown-menu > .highlight > a {
   /*
    * required to override bootstrap 3's
-   * .dropdown-menu > li > a:hover {} styles
+   * .vs__dropdown-menu > li > a:hover {} styles
    */
   background: #5897fb;
   color: #fff;
