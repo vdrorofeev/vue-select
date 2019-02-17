@@ -36,7 +36,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
 
-        <i v-if="!noDrop" ref="openIndicator" role="presentation" class="open-indicator"></i>
+        <i v-if="!noDrop" ref="openIndicator" role="presentation" class="vs__open-indicator"></i>
 
         <slot name="spinner">
           <div class="spinner" v-show="mutableLoading">Loading...</div>
