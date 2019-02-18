@@ -4,14 +4,14 @@
  * Disabled
  *
  * When the component is disabled, all interaction
- * should be prevented. He we modify the bg color,
+ * should be prevented. Here we modify the bg color,
  * and change the cursor displayed on the interactive
  * components.
  */
 
-$disabled-bg: $vs-component-disabled-bg;
-$disabled-color: $vs-component-disabled-color;
-$disabled-cursor: $vs-component-disabled-cursor;
+$disabled-bg: $vs-state-disabled-bg;
+$disabled-color: $vs-state-disabled-color;
+$disabled-cursor: $vs-state-disabled-cursor;
 
 .vs--disabled {
   .vs__dropdown-toggle,
