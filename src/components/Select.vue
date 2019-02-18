@@ -49,7 +49,7 @@
     </div>
 
     <transition :name="transition">
-      <ul ref="dropdownMenu" v-if="dropdownOpen" class="vs__dropdown-menu" :style="{ 'max-height': maxHeight }" role="listbox" @mousedown="onMousedown">
+      <ul ref="dropdownMenu" v-if="dropdownOpen" class="vs__dropdown-menu" role="listbox" @mousedown="onMousedown">
         <li
           role="option"
           v-for="(option, index) in filteredOptions"
@@ -120,16 +120,6 @@
       clearable: {
         type: Boolean,
         default: true
-      },
-
-      /**
-       * Sets the max-height property on the dropdown list.
-       * @deprecated
-       * @type {String}
-       */
-      maxHeight: {
-        type: String,
-        default: '400px'
       },
 
       /**

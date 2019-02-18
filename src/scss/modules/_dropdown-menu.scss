@@ -9,6 +9,7 @@ $box-shadow: $vs-dropdown-box-shadow;
 $bg-color: $vs-dropdown-bg;
 $z-index: $vs-dropdown-z-index;
 $min-width: $vs-dropdown-min-width;
+$max-height: $vs-dropdown-max-height;
 
 .vs__dropdown-menu {
   display: block;
@@ -19,6 +20,7 @@ $min-width: $vs-dropdown-min-width;
   padding: 5px 0;
   margin: 0;
   width: 100%;
+  max-height: $max-height;
   min-width: $min-width;
   overflow-y: auto;
   box-shadow: $box-shadow;

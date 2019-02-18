@@ -28,5 +28,6 @@ $vs-controls-size: 1 !default;
 //  Dropdown
 $vs-dropdown-z-index: 1000 !default;
 $vs-dropdown-min-width: 160px !default;
+$vs-dropdown-max-height: 350px !default;
 $vs-dropdown-box-shadow: 0px 3px 6px 0px map_get($vs-colors, 'darkest') !default;
 $vs-dropdown-bg: #fff !default;
