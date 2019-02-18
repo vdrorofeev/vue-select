@@ -28,6 +28,10 @@ $font-size: 1em;
   flex-grow: 1;
 }
 
+.vs__search::placeholder {
+  color: $vs-placeholder-color;
+}
+
 /**
     States
  */

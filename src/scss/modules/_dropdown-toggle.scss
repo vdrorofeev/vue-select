@@ -12,8 +12,8 @@
 
 $border-width: 1px;
 $border-style: solid;
-$border-color: rgba(60, 60, 60, .26) !default;
-$border-radius: $vs-border-radius !default;
+$border-color: $vs-border-color;
+$border-radius: $vs-border-radius;
 
 .vs__dropdown-toggle {
   appearance: none;

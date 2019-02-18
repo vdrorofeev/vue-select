@@ -1,12 +1,10 @@
 /* Clear Button */
 
-$color: rgba(60, 60, 60, 0.5);
-
 .vs__clear {
-  font-size: 23px;
+  font-size: 23px * $vs-controls-size;
   font-weight: 700;
   line-height: 1;
-  color: $color;
+  color: $vs-controls-color;
   padding: 0;
   border: 0;
   background-color: transparent;

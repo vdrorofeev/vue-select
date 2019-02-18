@@ -13,10 +13,6 @@
 }
 
 .vs__dropdown-option--highlight {
-  background: #5897fb;
-  color: #fff;
-
-  &:not(:last-child) {
-    margin-bottom: 0; /* Fixes Bulma Margin */
-  }
+  background: $vs-component-active-bg;
+  color: $vs-component-active-color;
 }

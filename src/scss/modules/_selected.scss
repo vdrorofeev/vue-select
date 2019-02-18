@@ -5,7 +5,7 @@
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: $vs-border-radius;
-  color: #333;
+  color: map_get($vs-colors, 'dark');
   line-height: 1.42857143; /* Normalize line height */
   margin: 4px 2px 0px 2px;
   padding: 0 0.25em;

@@ -9,8 +9,9 @@
  * components.
  */
 
-$disabled-bg: rgb(248, 248, 248);
-$disabled-cursor: not-allowed;
+$disabled-bg: $vs-component-disabled-bg;
+$disabled-color: $vs-component-disabled-color;
+$disabled-cursor: $vs-component-disabled-cursor;
 
 .vs--disabled {
   .vs__dropdown-toggle,
