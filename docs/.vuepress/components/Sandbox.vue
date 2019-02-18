@@ -239,11 +239,14 @@ export default {
   #sandbox-wrap {
     min-height: 100%;
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 100%;
+    grid-template-columns: auto 75%;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "sidebar component"
   }
 
   #config {
+    grid-area: sidebar;
     border-right: 1px solid #eaecef;
     display: flex;
     flex-direction: column;
@@ -251,6 +254,7 @@ export default {
   }
 
   #sandbox {
+    grid-area: component;
     display: flex;
     flex-direction: column;
     justify-content: center;

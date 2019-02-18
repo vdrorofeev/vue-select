@@ -28,4 +28,8 @@ export default {
     height: 100%;
     font-family: -apple-system, sans-serif;
   }
+
+  #app {
+    height: 100%;
+  }
 </style>
