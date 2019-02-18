@@ -2,6 +2,7 @@ $vs-colors: (
         lightest: rgba(60, 60, 60, 0.26),
         light: rgba(60, 60, 60, 0.5),
         dark: #333,
+        darkest: rgba(0, 0, 0, .15),
 ) !default;
 
 //  Active State
@@ -27,5 +28,5 @@ $vs-controls-size: 1 !default;
 //  Dropdown
 $vs-dropdown-z-index: 1000 !default;
 $vs-dropdown-min-width: 160px !default;
-$vs-dropdown-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .15) !default;
+$vs-dropdown-box-shadow: 0px 3px 6px 0px map_get($vs-colors, 'darkest') !default;
 $vs-dropdown-bg: #fff !default;
