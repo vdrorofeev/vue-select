@@ -1,10 +1,11 @@
 # Vue Select
 
-![Build Status](https://travis-ci.org/sagalbot/vue-select.svg?branch=master)
+![Current Release](https://img.shields.io/github/release/sagalbot/vue-select.svg?style=flat-square)
+![Bundle Size](https://img.shields.io/bundlephobia/min/vue-select.svg?style=flat-square) 
 ![Monthly Downloads](https://img.shields.io/npm/dm/vue-select.svg?style=flat-square) 
+![Code Coverage](https://img.shields.io/coveralls/github/sagalbot/vue-select.svg?style=flat-square) 
 ![Maintainability Score](https://img.shields.io/codeclimate/maintainability/sagalbot/vue-select.svg?style=flat-square) 
 ![MIT License](https://img.shields.io/github/license/sagalbot/vue-select.svg?style=flat-square) 
-![Current Release](https://img.shields.io/github/release/sagalbot/vue-select.svg?style=flat-square)
 
 > Everything you wish the native `<select>` element could do, wrapped 
 up into a zero dependency, highly extensible Vue component. 
