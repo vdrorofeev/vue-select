@@ -1,6 +1,6 @@
 /* Search Input */
 
-$line-height: 1.42857143;
+$line-height: $vs-component-line-height;
 $font-size: 1em;
 
 .vs__search::-webkit-search-decoration,
@@ -29,7 +29,7 @@ $font-size: 1em;
 }
 
 .vs__search::placeholder {
-  color: $vs-placeholder-color;
+  color: $vs-component-placeholder-color;
 }
 
 /**

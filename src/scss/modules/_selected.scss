@@ -2,35 +2,31 @@
 .vs__selected {
   display: flex;
   align-items: center;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: $vs-selected-bg;
+  border: $vs-selected-border-width $vs-selected-border-style $vs-selected-border-color;
   border-radius: $vs-border-radius;
   color: map_get($vs-colors, 'dark');
-  line-height: 1.42857143; /* Normalize line height */
+  line-height: $vs-component-line-height;
   margin: 4px 2px 0px 2px;
   padding: 0 0.25em;
-  transition: opacity .25s;
 }
 
 .vs__deselect {
-  margin-left: 2px;
+  display: inline-flex;
   font-size: 1.25em;
   appearance: none;
+  margin-left: 2px;
   padding: 0;
-  cursor: pointer;
-  background: 0 0;
   border: 0;
+  cursor: pointer;
+  background: none;
   font-weight: 700;
   line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: .2;
+  color: $vs-controls-color;
+  text-shadow: $vs-controls-deselect-text-shadow;
 }
 
-/**
-    States
- */
+/* States */
 
 .vs--single {
   .vs__selected {

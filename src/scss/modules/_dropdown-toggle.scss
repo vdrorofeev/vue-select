@@ -10,8 +10,8 @@
     .vs__actions holds the clear button and dropdown toggle.
  */
 
-$border-width: 1px;
-$border-style: solid;
+$border-width: $vs-border-width;
+$border-style: $vs-border-style;
 $border-color: $vs-border-color;
 $border-radius: $vs-border-radius;
 
