@@ -3,11 +3,7 @@ cache: npm
 
 node_js:
   - node
-
-install:
-  - yarn global add codecov
-  - yarn
-
+  
 script:
-  - yarn test --coverage --coverageReporters=lcov
+  - yarn test --coverage --coverageReporters=text-lcov
   - codecov
