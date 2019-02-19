@@ -5,4 +5,4 @@ install:
   - yarn global add codecov
   - yarn
 script:
-  - yarn test --coverage --coverageReporters=text-lcov && codecov
+  - yarn test --coverage --coverageReporters=lcov && codecov
