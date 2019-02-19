@@ -13,16 +13,13 @@
 
 .vs__deselect {
   display: inline-flex;
-  font-size: 1.25em;
   appearance: none;
-  margin-left: 2px;
+  margin-left: 4px;
   padding: 0;
   border: 0;
   cursor: pointer;
   background: none;
-  font-weight: 700;
-  line-height: 1;
-  color: $vs-controls-color;
+  fill: $vs-controls-color;
   text-shadow: $vs-controls-deselect-text-shadow;
 }
 

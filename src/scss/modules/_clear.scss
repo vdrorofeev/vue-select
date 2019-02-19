@@ -1,10 +1,7 @@
 /* Clear Button */
 
 .vs__clear {
-  font-size: 23px * $vs-controls-size;
-  font-weight: 700;
-  line-height: 1;
-  color: $vs-controls-color;
+  fill: $vs-controls-color;
   padding: 0;
   border: 0;
   background-color: transparent;

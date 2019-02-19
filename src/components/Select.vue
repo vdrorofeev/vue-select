@@ -18,7 +18,7 @@
               {{ getOptionLabel(option) }}
             </slot>
             <button v-if="multiple" :disabled="disabled" @click="deselect(option)" type="button" class="vs__deselect" aria-label="Deselect option">
-              <span aria-hidden="true">&times;</span>
+              <deselect />
             </button>
           </span>
         </slot>
@@ -37,10 +37,10 @@
           class="vs__clear"
           title="Clear selection"
         >
-          <span aria-hidden="true">&times;</span>
+          <deselect />
         </button>
 
-        <i v-if="!noDrop" ref="openIndicator" role="presentation" class="vs__open-indicator"></i>
+        <open-indicator v-if="!noDrop" ref="openIndicator" role="presentation" class="vs__open-indicator" />
 
         <slot name="spinner" v-bind="scope.spinner">
           <div class="vs__spinner" v-show="mutableLoading">Loading...</div>
@@ -75,8 +75,12 @@
   import pointerScroll from '../mixins/pointerScroll'
   import typeAheadPointer from '../mixins/typeAheadPointer'
   import ajax from '../mixins/ajax'
+  import Deselect from './Deselect'
+  import OpenIndicator from './OpenIndicator'
 
   export default {
+    components: {Deselect, OpenIndicator},
+
     mixins: [pointerScroll, typeAheadPointer, ajax],
 
     props: {
