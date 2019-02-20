@@ -739,6 +739,14 @@
       selectOnTab: {
         type: Boolean,
         default: false
+      },
+
+      /**
+       * When `false`, dropdown list isn't hidding while loading is `true`
+       */
+      hideListOnLoading: {
+        type: Boolean,
+        default: true,
       }
     },
 
@@ -805,6 +813,13 @@
        */
       multiple(val) {
         this.mutableValue = val ? [] : null
+      },
+
+      /**
+       * Emits text when text in entering
+       */
+      search(val) {
+        this.$emit('search', val)
       }
     },
 
@@ -816,8 +831,17 @@
       this.mutableValue = this.value
       this.mutableOptions = this.options.slice(0)
       this.mutableLoading = this.loading
+      this.onScroll = this.onScroll.bind(this)
 
       this.$on('option:created', this.maybePushTag)
+    },
+
+    beforeDestroy() {
+      const { dropdownMenu } = this.$refs
+
+      if (dropdownMenu != null) {
+        dropdownMenu.removeEventListener('scroll', this.onScroll)
+      }
     },
 
     methods: {
@@ -913,6 +937,12 @@
             if (!this.disabled) {
               this.open = true
               this.$refs.search.focus()
+              // Handle scrolling
+              // Handler doesn't need to be removed, because the dropdown menu removes itself from the DOM
+              // each time when it closes
+              this.$nextTick(() => {
+                this.$refs.dropdownMenu.addEventListener('scroll', this.onScroll)
+              })
             }
           }
         }
@@ -1076,6 +1106,24 @@
        */
       onMousedown() {
         this.mousedown = true
+      },
+
+      /**
+       * Handler called each time when scrolling dropdown list
+       * @return {void}
+       */
+      onScroll() {
+        if (this.isScrolledToBottom()) {
+          this.$emit('onScrollToBottom')
+        }
+      },
+
+      /**
+       * @return {boolean} `true` if the list is scrolled to bottom
+       */
+      isScrolledToBottom() {
+        const { dropdownMenu } = this.$refs;
+        return dropdownMenu.offsetHeight + dropdownMenu.scrollTop > dropdownMenu.scrollHeight - 2
       }
     },
 
@@ -1121,7 +1169,7 @@
        * @return {Boolean} True if open
        */
       dropdownOpen() {
-        return this.noDrop ? false : this.open && !this.mutableLoading
+        return this.noDrop ? false : this.open && (!this.hideListOnLoading || !this.mutableLoading)
       },
 
       /**
